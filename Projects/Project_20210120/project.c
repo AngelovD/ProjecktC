@@ -8,18 +8,18 @@
 Изход: 3
 Обяснение: 15 -> 1111, 8 -> 1000, двете числа имат различни битове на позиции 1, 2 и 3. */
 
-unsigned int findDif( int a, int b);
+unsigned int findDif(int a, int b);
 void deciKumBin(int n);
 
 int main(void){
 
-    int a,b;
-
+    int a, b;
 
     printf("\nEnter decimal value for A: ");
     scanf("%d", &a);
 
-    if(a<0){
+    if (a < 0)
+    {
         a = ~a;
         a += 1;
     }
@@ -30,7 +30,8 @@ int main(void){
     printf("\n\nEnter decimal value for B: ");
     scanf("%d", &b);
 
-    if(b<0){
+    if (b < 0)
+    {
         b = ~b;
         b += 1;
     }
@@ -38,31 +39,30 @@ int main(void){
     deciKumBin(b);
 
 
-    printf("\n\nThe sum of the differences between the numbers on bit level is: %d.\n\n", findDif(a,b));
-
+    printf("\n\nThe sum of the differences between the numbers on bit level is: %d.\n\n", findDif(a, b));
 
     return 0;
 }
 
 unsigned int findDif(int a, int b){
-    int res = a^b;
-    unsigned int counter=0;
+    int res = a ^ b;
+    unsigned int counter = 0;
     unsigned char cCheck = 1;
 
-    while(res>0){
-        counter+=res&cCheck;
-        res=res>>1;
+    while (res > 0){
+        counter += res & cCheck;
+        res = res >> 1;
     }
     return counter;
 }
 
-void deciKumBin(int n) {
+void deciKumBin(int n){
 
     printf("Binary value is: ");
 
-	unsigned i;
+    unsigned i;
     unsigned iCheck = 31;
-	for (i = 1 << iCheck; i > 0; i = i >> 1 ) {
-		(n & i)? printf("1"): printf("0"); 
+    for (i = 1 << iCheck; i > 0; i = i >> 1){
+        (n & i) ? printf("1") : printf("0");
     }
 }
