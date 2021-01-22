@@ -6,10 +6,10 @@
 Изход: 3
 Обяснение: 15 -> 1111, 8 -> 1000, двете числа имат различни битове на позиции 1, 2 и 3. */
 
-int findDif(int a, int b){
+unsigned int findDif(unsigned int a,unsigned int b){
 
-    int res = a^b;
-    int counter=0;
+    unsigned int res = a^b;
+    unsigned int counter=0;
     unsigned char cCheck = 1;
 
     while(res>0){
@@ -21,14 +21,14 @@ int findDif(int a, int b){
 
 int main(void){
 
-    int x,y;
+    unsigned int x,y;
 
     printf("First number= ");
     scanf("%d",&x);
     printf("Second number= ");
     scanf("%d",&y);
 
-    int res = findDif(x,y);
+    unsigned int res = findDif(x,y);
 
     printf("Binary difference: %d",res);
 
