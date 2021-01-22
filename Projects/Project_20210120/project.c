@@ -21,7 +21,7 @@ int main(void){
         a = ~a;
         a += 1;
     }
-    printf("You entered A with value of %d.\n", a);
+    printf("You entered A with absolute value of %d.\n", a);
     deciKumBin(a);
 
 
@@ -32,7 +32,7 @@ int main(void){
         b = ~b;
         b += 1;
     }
-    printf("You entered B with value of %d.\n", b);
+    printf("You entered B with absolute value of %d.\n", b);
     deciKumBin(b);
 
 
