@@ -8,7 +8,7 @@
 Обяснение: 15 -> 1111, 8 -> 1000, двете числа имат различни битове на позиции 1, 2 и 3. */
 
 unsigned int findDif(unsigned int a, unsigned int b);
-void deciKumBin(unsigned int n);
+void decToBin(unsigned int n);
 
 int main(void){
 
@@ -22,7 +22,7 @@ int main(void){
         a += 1;
     }
     printf("You entered A with absolute value of %d\n", a);
-    deciKumBin(a);
+    decToBin(a);
 
 
     printf("\n\nEnter decimal value for B: ");
@@ -33,7 +33,7 @@ int main(void){
         b += 1;
     }
     printf("You entered B with absolute value of %d\n", b);
-    deciKumBin(b);
+    decToBin(b);
 
 
     printf("\n\nThe sum of the differences between the numbers on bit level is: %d\n\n", findDif(a, b));
@@ -53,7 +53,7 @@ unsigned int findDif(unsigned int a,unsigned int b){
     return counter;
 }
 
-void deciKumBin(unsigned int n){
+void decToBin(unsigned int n){
 
     printf("Binary value is: ");
 
