@@ -30,7 +30,7 @@ int main(void){
 
     int res = findDif(x,y);
 
-    printf("%d",res);
+    printf("Binary difference: %d",res);
 
 
     return 0;
