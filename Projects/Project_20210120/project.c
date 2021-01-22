@@ -39,10 +39,10 @@ unsigned int findDif(unsigned int a,unsigned int b){
     unsigned int counter = 0;
     unsigned char cCheck = 1;
 
-    while (res > 0){
+    do{
         counter += res & cCheck;
-        res = res >> 1;
-    }
+    }while(res>>=1);
+
     return counter;
 }
 
