@@ -17,8 +17,7 @@ int main(void){
     printf("\nEnter decimal value for A: ");
     scanf("%d", &a);
 
-    if (a < 0)
-    {
+    if (a < 0){
         a = ~a;
         a += 1;
     }
@@ -29,8 +28,7 @@ int main(void){
     printf("\n\nEnter decimal value for B: ");
     scanf("%d", &b);
 
-    if (b < 0)
-    {
+    if (b < 0){
         b = ~b;
         b += 1;
     }
